@@ -3,19 +3,18 @@
 import UIKit
 import WebKit
 
-class WQX: UIViewController, WKNavigationDelegate {
+class WJUMP: UIViewController, WKNavigationDelegate {
 
-    var wQX: WKWebView!
-    var goQX: URL!
-    let loaderQX = UIActivityIndicatorView()
+    var wJ: WKWebView!
+    var goJ: URL!
+    
     let protectionSpace = URLProtectionSpace(host: "example.com", port: 0, protocol: "http", realm: nil, authenticationMethod: NSURLAuthenticationMethodHTTPBasic)
     var homePage: String!
     var hC: CGFloat = 0
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    var isShowNav = true
+    var isAlredyJ = UserDefaults.standard.string(forKey: "alredyJ") == nil ? false : true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +41,18 @@ class WQX: UIViewController, WKNavigationDelegate {
                 }
             }
         }
-        wQX = WKWebView(frame: CGRect(x: 0, y: CGFloat(hC), width: view.frame.size.width, height: view.frame.size.height - hC), configuration: configuration)
-        view.addSubview(wQX)
-        wQX.navigationDelegate = self
-        
-        
-        if isShowNav {
-            
+        wJ = WKWebView(frame: CGRect(x: 0, y: CGFloat(hC), width: view.frame.size.width, height: view.frame.size.height - hC), configuration: configuration)
+        view.addSubview(wJ)
+        wJ.navigationDelegate = self
+
             let navView = UIView()
             view.addSubview(navView)
             view.bringSubviewToFront(navView)
             navView.translatesAutoresizingMaskIntoConstraints = false
             navView.backgroundColor = .black
             navView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            navView.leadingAnchor.constraint(equalTo: wQX.leadingAnchor).isActive = true
-            navView.trailingAnchor.constraint(equalTo: wQX.trailingAnchor).isActive = true
+            navView.leadingAnchor.constraint(equalTo: wJ.leadingAnchor).isActive = true
+            navView.trailingAnchor.constraint(equalTo: wJ.trailingAnchor).isActive = true
             navView.heightAnchor.constraint(equalToConstant: hC).isActive = true
             
             
@@ -73,7 +69,7 @@ class WQX: UIViewController, WKNavigationDelegate {
                    leftButton.addTarget(self, action: #selector(onWebBQX), for: .touchUpInside)
 
                    let rightButton = UIButton()
-                   if let rightImage = UIImage(systemName: "arrow.clockwise.circle") {
+                   if let rightImage = UIImage(systemName: "arrow.right") {
                        let scaledRightImage = rightImage.withConfiguration(UIImage.SymbolConfiguration(pointSize: 34))
                        rightButton.setImage(scaledRightImage, for: .normal)
                    }
@@ -93,30 +89,29 @@ class WQX: UIViewController, WKNavigationDelegate {
                      stackView.heightAnchor.constraint(equalToConstant: 40),
                      stackView.widthAnchor.constraint(equalTo: navView.widthAnchor)
                  ])
-        }
-        goQX = URL(string: "https://preview.codecanyon.net/item/stick-jump-html5-mobile-game-android-ios/full_screen_preview/25558822?_ga=2.892981.582885592.1701124564-2013591962.1700600824")
+   
+     //   goJ = URL(string: "https://preview.codecanyon.net/item/stick-jump-html5-mobile-game-android-ios/full_screen_preview/25558822?_ga=2.892981.582885592.1701124564-2013591962.1700600824")
 
-            let request = URLRequest(url: goQX)
-            wQX.load(request)
+            let request = URLRequest(url: goJ)
+            wJ.load(request)
     
       
     }
-    var isAlredyQX = UserDefaults.standard.string(forKey: "alredyQX") == nil ? false : true
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         guard let strUrl = webView.url?.absoluteString else { return }
         print(strUrl)
-        if !isAlredyQX {
-            UserDefaults.standard.set(strUrl, forKey: "alredyQX")
-            isAlredyQX = true
+        if !isAlredyJ {
+            UserDefaults.standard.set(strUrl, forKey: "alredyJ")
+            isAlredyJ = true
         }
     }
     
     @objc func onWebBQX() {
-        wQX.goBack()
+        wJ.goBack()
     }
     
     @objc func onWebRQX() {
-        wQX.reload()
+        wJ.goForward()
     }
 }
 
@@ -132,10 +127,10 @@ class ForGame: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         view.backgroundColor = .black
         // Create a UIWebView
-        let val: CGFloat = UIScreen.main.bounds.width < 380 ? 40 : 10
+        let val: CGFloat = UIScreen.main.bounds.width < 380 ? 30 : 10
         blV = UIView(frame: CGRect(x: 0, y: 0, width: Int(view.frame.width), height: UIScreen.main.bounds.width < 380 ? 40: 105))
         blV.backgroundColor = .black
-            goJump = WKWebView(frame: CGRect(x: view.frame.minX - val, y: view.frame.minY - val, width: view.frame.width + val * 2, height: view.frame.height + val * 2))
+        goJump = WKWebView(frame: CGRect(x: view.frame.minX - val, y: UIScreen.main.bounds.width < 380 ? view.frame.minY - val + 10 : view.frame.minY - val, width: view.frame.width + val * 2, height: view.frame.height + val * 2))
         goJump.isHidden = true
         goJump.navigationDelegate = self
         goJump.backgroundColor = .black

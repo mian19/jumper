@@ -26,6 +26,10 @@
 		67420BC12B0FF5740063B457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67420BC02B0FF5740063B457 /* AppDelegate.swift */; };
 		67420BCA2B0FF5760063B457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67420BC92B0FF5760063B457 /* Assets.xcassets */; };
 		67420BCD2B0FF5760063B457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67420BCB2B0FF5760063B457 /* LaunchScreen.storyboard */; };
+		676CE90A2B1669D10085E9F1 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CE9092B1669D10085E9F1 /* ReaderViewController.swift */; };
+		676CE90C2B1669E20085E9F1 /* ReaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676CE90B2B1669E20085E9F1 /* ReaderViewController.storyboard */; };
+		676CE90E2B166E270085E9F1 /* TutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CE90D2B166E270085E9F1 /* TutorViewController.swift */; };
+		676CE9102B166E4C0085E9F1 /* TutorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676CE90F2B166E4C0085E9F1 /* TutorViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		67420BC92B0FF5760063B457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67420BCC2B0FF5760063B457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67420BCE2B0FF5760063B457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		676CE9092B1669D10085E9F1 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		676CE90B2B1669E20085E9F1 /* ReaderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReaderViewController.storyboard; sourceTree = "<group>"; };
+		676CE90D2B166E270085E9F1 /* TutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorViewController.swift; sourceTree = "<group>"; };
+		676CE90F2B166E4C0085E9F1 /* TutorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,10 @@
 				6700DD922B152B0100163AA8 /* MenuViewController.swift */,
 				6700DD942B152B0900163AA8 /* MenuViewController.storyboard */,
 				6700DD962B152B3800163AA8 /* JUMPw.swift */,
+				676CE9092B1669D10085E9F1 /* ReaderViewController.swift */,
+				676CE90B2B1669E20085E9F1 /* ReaderViewController.storyboard */,
+				676CE90D2B166E270085E9F1 /* TutorViewController.swift */,
+				676CE90F2B166E4C0085E9F1 /* TutorViewController.storyboard */,
 			);
 			path = jumper;
 			sourceTree = "<group>";
@@ -249,6 +261,8 @@
 			files = (
 				67420BCD2B0FF5760063B457 /* LaunchScreen.storyboard in Resources */,
 				6700DDB52B155DE400163AA8 /* LondrinaSolid-Black.ttf in Resources */,
+				676CE9102B166E4C0085E9F1 /* TutorViewController.storyboard in Resources */,
+				676CE90C2B1669E20085E9F1 /* ReaderViewController.storyboard in Resources */,
 				6700DD912B151FE300163AA8 /* CustomLaunchViewController.storyboard in Resources */,
 				67420BCA2B0FF5760063B457 /* Assets.xcassets in Resources */,
 				6700DD8D2B151FA600163AA8 /* StartViewControllerJUMP.storyboard in Resources */,
@@ -273,9 +287,11 @@
 			files = (
 				6700DD8F2B151FDA00163AA8 /* CustomLaunchViewController.swift in Sources */,
 				6700DD972B152B3800163AA8 /* JUMPw.swift in Sources */,
+				676CE90E2B166E270085E9F1 /* TutorViewController.swift in Sources */,
 				67420BC12B0FF5740063B457 /* AppDelegate.swift in Sources */,
 				6700DD8B2B151F9400163AA8 /* StartViewControllerJUMP.swift in Sources */,
 				6700DD932B152B0100163AA8 /* MenuViewController.swift in Sources */,
+				676CE90A2B1669D10085E9F1 /* ReaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

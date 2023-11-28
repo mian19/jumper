@@ -53,5 +53,10 @@ class StartViewControllerJUMP: UIViewController {
         let w = ForGame()
         self.navigationController?.pushViewController(w, animated: false)
     }
+    @IBAction func onTutor(_ sender: Any) {
+        let storyboardMenu = UIStoryboard(name: "TutorViewController", bundle: nil)
+        let jumpG = storyboardMenu.instantiateViewController(withIdentifier: "TutorViewController")
+        self.navigationController?.pushViewController(jumpG, animated: false)
+    }
     
 }

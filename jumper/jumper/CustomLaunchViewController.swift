@@ -32,13 +32,23 @@ class CustomLaunchViewController: UIViewController {
     }
 
     @IBAction func onPriv(_ sender: Any) {
+        let storyboardMenu = UIStoryboard(name: "ReaderViewController", bundle: nil)
+        let jumpG = storyboardMenu.instantiateViewController(withIdentifier: "ReaderViewController")
+       
+        self.navigationController?.pushViewController(jumpG, animated: true)
     }
     
     @IBAction func onTerms(_ sender: Any) {
+        let storyboardMenu = UIStoryboard(name: "ReaderViewController", bundle: nil)
+        let jumpG = storyboardMenu.instantiateViewController(withIdentifier: "ReaderViewController")
+        if let ju = jumpG as? ReaderViewController {
+            ju.type = 1
+        }
+        self.navigationController?.pushViewController(jumpG, animated: true)
     }
     
     @IBAction func onMusic(_ sender: Any) {
-        var old = UserDefaults.standard.bool(forKey: "isSoundOff")
+        let old = UserDefaults.standard.bool(forKey: "isSoundOff")
         if old {
             musicBut.setImage(UIImage(named: "Property 1=sound_max"), for: .normal)
             UserDefaults.standard.setValue(false, forKey: "isSoundOff")
