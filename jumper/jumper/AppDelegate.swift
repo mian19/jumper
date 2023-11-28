@@ -3,6 +3,7 @@ import UIKit
 import OneSignalFramework
 import AppsFlyerLib
 import Alamofire
+import AppTrackingTransparency
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,14 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         OneSignal.initialize("004fbf49-d980-473f-94ac-b5a0156848c6", withLaunchOptions: launchOptions)
-        OneSignal.Notifications.requestPermission({ accepted in
-           print("User accepted notifications: \(accepted)")
-         }, fallbackToSettings: true)
+   
+       
               AppsFlyerLib.shared().appsFlyerDevKey = "zQn8kvc7FS6pQRMXMyh3WN"
               AppsFlyerLib.shared().appleAppID = "6467253227"
-              
+        AppsFlyerLib.shared().start()
               AppsFlyerLib.shared().delegate = self
-              AppsFlyerLib.shared().isDebug = true
+              AppsFlyerLib.shared().isDebug = false
         
         
         if (NetworkState().isInternetAvailable) {
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                         ]
                                         
                                         if let finalURL = urlComponents.url {
-                                            vc.goJ = url
+                                            vc.goJ = finalURL
                                             self.window?.rootViewController = vc
                                             self.window?.makeKeyAndVisible()
                                         }

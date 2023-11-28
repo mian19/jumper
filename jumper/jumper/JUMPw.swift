@@ -41,7 +41,7 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                 }
             }
         }
-        wJ = WKWebView(frame: CGRect(x: 0, y: CGFloat(hC), width: view.frame.size.width, height: view.frame.size.height - hC), configuration: configuration)
+        wJ = WKWebView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height - hC), configuration: configuration)
         view.addSubview(wJ)
         wJ.navigationDelegate = self
 
@@ -50,7 +50,7 @@ class WJUMP: UIViewController, WKNavigationDelegate {
             view.bringSubviewToFront(navView)
             navView.translatesAutoresizingMaskIntoConstraints = false
             navView.backgroundColor = .black
-            navView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            navView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             navView.leadingAnchor.constraint(equalTo: wJ.leadingAnchor).isActive = true
             navView.trailingAnchor.constraint(equalTo: wJ.trailingAnchor).isActive = true
             navView.heightAnchor.constraint(equalToConstant: hC).isActive = true
@@ -74,7 +74,8 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                        rightButton.setImage(scaledRightImage, for: .normal)
                    }
                    rightButton.addTarget(self, action: #selector(onWebRQX), for: .touchUpInside)
-
+        rightButton.tintColor = UIColor.lightGray
+        leftButton.tintColor = UIColor.lightGray
                  
                  stackView.addArrangedSubview(leftButton)
                  stackView.addArrangedSubview(rightButton)
@@ -84,10 +85,10 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                  // Set stack view constraints to position it as needed
                  stackView.translatesAutoresizingMaskIntoConstraints = false
                  NSLayoutConstraint.activate([
-                     stackView.centerXAnchor.constraint(equalTo: navView.centerXAnchor),
-                     stackView.bottomAnchor.constraint(equalTo: navView.bottomAnchor, constant: -5),
-                     stackView.heightAnchor.constraint(equalToConstant: 40),
-                     stackView.widthAnchor.constraint(equalTo: navView.widthAnchor)
+                     stackView.heightAnchor.constraint(equalToConstant: 30),
+                     stackView.widthAnchor.constraint(equalToConstant: 150 ),
+                     stackView.leadingAnchor.constraint(equalTo: navView.leadingAnchor, constant: 15 ),
+                     stackView.centerYAnchor.constraint(equalTo: navView.centerYAnchor)
                  ])
    
      //   goJ = URL(string: "https://preview.codecanyon.net/item/stick-jump-html5-mobile-game-android-ios/full_screen_preview/25558822?_ga=2.892981.582885592.1701124564-2013591962.1700600824")
