@@ -7,12 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6700DD862B151A2500163AA8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DD852B151A2500163AA8 /* Alamofire */; };
+		6700DD892B151B6300163AA8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DD882B151B6300163AA8 /* SnapKit */; };
+		6700DD8B2B151F9400163AA8 /* StartViewControllerJUMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700DD8A2B151F9400163AA8 /* StartViewControllerJUMP.swift */; };
+		6700DD8D2B151FA600163AA8 /* StartViewControllerJUMP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6700DD8C2B151FA600163AA8 /* StartViewControllerJUMP.storyboard */; };
+		6700DD8F2B151FDA00163AA8 /* CustomLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700DD8E2B151FDA00163AA8 /* CustomLaunchViewController.swift */; };
+		6700DD912B151FE300163AA8 /* CustomLaunchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6700DD902B151FE300163AA8 /* CustomLaunchViewController.storyboard */; };
+		6700DD932B152B0100163AA8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700DD922B152B0100163AA8 /* MenuViewController.swift */; };
+		6700DD952B152B0900163AA8 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6700DD942B152B0900163AA8 /* MenuViewController.storyboard */; };
+		6700DD972B152B3800163AA8 /* JUMPw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700DD962B152B3800163AA8 /* JUMPw.swift */; };
+		6700DD9A2B15413500163AA8 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DD992B15413500163AA8 /* OneSignalExtension */; };
+		6700DD9C2B15413500163AA8 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DD9B2B15413500163AA8 /* OneSignalFramework */; };
+		6700DD9E2B15413500163AA8 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DD9D2B15413500163AA8 /* OneSignalInAppMessages */; };
+		6700DDA12B15417F00163AA8 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 6700DDA02B15417F00163AA8 /* AppsFlyerLib */; };
+		6700DDA92B1543EC00163AA8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700DDA82B1543EC00163AA8 /* NotificationService.swift */; };
+		6700DDAD2B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6700DDA62B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6700DDB52B155DE400163AA8 /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6700DDB42B155DE400163AA8 /* LondrinaSolid-Black.ttf */; };
 		67420BC12B0FF5740063B457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67420BC02B0FF5740063B457 /* AppDelegate.swift */; };
 		67420BCA2B0FF5760063B457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67420BC92B0FF5760063B457 /* Assets.xcassets */; };
 		67420BCD2B0FF5760063B457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67420BCB2B0FF5760063B457 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6700DDAB2B1543EC00163AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67420BB52B0FF5740063B457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6700DDA52B1543EC00163AA8;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6700DDB12B1543EC00163AA8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6700DDAD2B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6700DD8A2B151F9400163AA8 /* StartViewControllerJUMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewControllerJUMP.swift; sourceTree = "<group>"; };
+		6700DD8C2B151FA600163AA8 /* StartViewControllerJUMP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewControllerJUMP.storyboard; sourceTree = "<group>"; };
+		6700DD8E2B151FDA00163AA8 /* CustomLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLaunchViewController.swift; sourceTree = "<group>"; };
+		6700DD902B151FE300163AA8 /* CustomLaunchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomLaunchViewController.storyboard; sourceTree = "<group>"; };
+		6700DD922B152B0100163AA8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6700DD942B152B0900163AA8 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		6700DD962B152B3800163AA8 /* JUMPw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JUMPw.swift; sourceTree = "<group>"; };
+		6700DDA62B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6700DDA82B1543EC00163AA8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6700DDAA2B1543EC00163AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6700DDB22B1546DD00163AA8 /* jumper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jumper.entitlements; sourceTree = "<group>"; };
+		6700DDB32B154C4700163AA8 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		6700DDB42B155DE400163AA8 /* LondrinaSolid-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Black.ttf"; sourceTree = "<group>"; };
 		67420BBD2B0FF5740063B457 /* jumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67420BC02B0FF5740063B457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67420BC92B0FF5760063B457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -21,20 +74,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		67420BBA2B0FF5740063B457 /* Frameworks */ = {
+		6700DDA32B1543EC00163AA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67420BBA2B0FF5740063B457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6700DD9E2B15413500163AA8 /* OneSignalInAppMessages in Frameworks */,
+				6700DD9C2B15413500163AA8 /* OneSignalFramework in Frameworks */,
+				6700DD862B151A2500163AA8 /* Alamofire in Frameworks */,
+				6700DD9A2B15413500163AA8 /* OneSignalExtension in Frameworks */,
+				6700DD892B151B6300163AA8 /* SnapKit in Frameworks */,
+				6700DDA12B15417F00163AA8 /* AppsFlyerLib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6700DDA72B1543EC00163AA8 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6700DDB32B154C4700163AA8 /* OneSignalNotificationServiceExtension.entitlements */,
+				6700DDA82B1543EC00163AA8 /* NotificationService.swift */,
+				6700DDAA2B1543EC00163AA8 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		67420BB42B0FF5740063B457 = {
 			isa = PBXGroup;
 			children = (
 				67420BBF2B0FF5740063B457 /* jumper */,
+				6700DDA72B1543EC00163AA8 /* OneSignalNotificationServiceExtension */,
 				67420BBE2B0FF5740063B457 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				67420BBD2B0FF5740063B457 /* jumper.app */,
+				6700DDA62B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,10 +128,19 @@
 		67420BBF2B0FF5740063B457 /* jumper */ = {
 			isa = PBXGroup;
 			children = (
+				6700DDB22B1546DD00163AA8 /* jumper.entitlements */,
 				67420BC02B0FF5740063B457 /* AppDelegate.swift */,
 				67420BC92B0FF5760063B457 /* Assets.xcassets */,
 				67420BCB2B0FF5760063B457 /* LaunchScreen.storyboard */,
+				6700DDB42B155DE400163AA8 /* LondrinaSolid-Black.ttf */,
 				67420BCE2B0FF5760063B457 /* Info.plist */,
+				6700DD8A2B151F9400163AA8 /* StartViewControllerJUMP.swift */,
+				6700DD8C2B151FA600163AA8 /* StartViewControllerJUMP.storyboard */,
+				6700DD8E2B151FDA00163AA8 /* CustomLaunchViewController.swift */,
+				6700DD902B151FE300163AA8 /* CustomLaunchViewController.storyboard */,
+				6700DD922B152B0100163AA8 /* MenuViewController.swift */,
+				6700DD942B152B0900163AA8 /* MenuViewController.storyboard */,
+				6700DD962B152B3800163AA8 /* JUMPw.swift */,
 			);
 			path = jumper;
 			sourceTree = "<group>";
@@ -61,6 +148,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6700DDA52B1543EC00163AA8 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6700DDAE2B1543EC00163AA8 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				6700DDA22B1543EC00163AA8 /* Sources */,
+				6700DDA32B1543EC00163AA8 /* Frameworks */,
+				6700DDA42B1543EC00163AA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 6700DDA62B1543EC00163AA8 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		67420BBC2B0FF5740063B457 /* jumper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67420BD12B0FF5760063B457 /* Build configuration list for PBXNativeTarget "jumper" */;
@@ -68,12 +172,22 @@
 				67420BB92B0FF5740063B457 /* Sources */,
 				67420BBA2B0FF5740063B457 /* Frameworks */,
 				67420BBB2B0FF5740063B457 /* Resources */,
+				6700DDB12B1543EC00163AA8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6700DDAC2B1543EC00163AA8 /* PBXTargetDependency */,
 			);
 			name = jumper;
+			packageProductDependencies = (
+				6700DD852B151A2500163AA8 /* Alamofire */,
+				6700DD882B151B6300163AA8 /* SnapKit */,
+				6700DD992B15413500163AA8 /* OneSignalExtension */,
+				6700DD9B2B15413500163AA8 /* OneSignalFramework */,
+				6700DD9D2B15413500163AA8 /* OneSignalInAppMessages */,
+				6700DDA02B15417F00163AA8 /* AppsFlyerLib */,
+			);
 			productName = jumper;
 			productReference = 67420BBD2B0FF5740063B457 /* jumper.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +202,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					6700DDA52B1543EC00163AA8 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					67420BBC2B0FF5740063B457 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -102,37 +219,75 @@
 				Base,
 			);
 			mainGroup = 67420BB42B0FF5740063B457;
+			packageReferences = (
+				6700DD842B151A2500163AA8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6700DD872B151B6300163AA8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6700DD982B15413500163AA8 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				6700DD9F2B15417F00163AA8 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			productRefGroup = 67420BBE2B0FF5740063B457 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				67420BBC2B0FF5740063B457 /* jumper */,
+				6700DDA52B1543EC00163AA8 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6700DDA42B1543EC00163AA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67420BBB2B0FF5740063B457 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				67420BCD2B0FF5760063B457 /* LaunchScreen.storyboard in Resources */,
+				6700DDB52B155DE400163AA8 /* LondrinaSolid-Black.ttf in Resources */,
+				6700DD912B151FE300163AA8 /* CustomLaunchViewController.storyboard in Resources */,
 				67420BCA2B0FF5760063B457 /* Assets.xcassets in Resources */,
+				6700DD8D2B151FA600163AA8 /* StartViewControllerJUMP.storyboard in Resources */,
+				6700DD952B152B0900163AA8 /* MenuViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6700DDA22B1543EC00163AA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6700DDA92B1543EC00163AA8 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67420BB92B0FF5740063B457 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6700DD8F2B151FDA00163AA8 /* CustomLaunchViewController.swift in Sources */,
+				6700DD972B152B3800163AA8 /* JUMPw.swift in Sources */,
 				67420BC12B0FF5740063B457 /* AppDelegate.swift in Sources */,
+				6700DD8B2B151F9400163AA8 /* StartViewControllerJUMP.swift in Sources */,
+				6700DD932B152B0100163AA8 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6700DDAC2B1543EC00163AA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6700DDA52B1543EC00163AA8 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 6700DDAB2B1543EC00163AA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		67420BCB2B0FF5760063B457 /* LaunchScreen.storyboard */ = {
@@ -146,6 +301,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6700DDAF2B1543EC00163AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67A656CXMY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kyzu.jumper.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6700DDB02B1543EC00163AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67A656CXMY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kyzu.jumper.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		67420BCF2B0FF5760063B457 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -263,8 +470,10 @@
 		67420BD22B0FF5760063B457 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = jumper/jumper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 67A656CXMY;
@@ -272,7 +481,6 @@
 				INFOPLIST_FILE = jumper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,8 +502,10 @@
 		67420BD32B0FF5760063B457 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = jumper/jumper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 67A656CXMY;
@@ -303,7 +513,6 @@
 				INFOPLIST_FILE = jumper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,6 +534,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6700DDAE2B1543EC00163AA8 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6700DDAF2B1543EC00163AA8 /* Debug */,
+				6700DDB02B1543EC00163AA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		67420BB82B0FF5740063B457 /* Build configuration list for PBXProject "jumper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -344,6 +562,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6700DD842B151A2500163AA8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6700DD872B151B6300163AA8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6700DD982B15413500163AA8 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6700DD9F2B15417F00163AA8 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6700DD852B151A2500163AA8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD842B151A2500163AA8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6700DD882B151B6300163AA8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD872B151B6300163AA8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		6700DD992B15413500163AA8 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD982B15413500163AA8 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		6700DD9B2B15413500163AA8 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD982B15413500163AA8 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+		6700DD9D2B15413500163AA8 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD982B15413500163AA8 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalInAppMessages;
+		};
+		6700DDA02B15417F00163AA8 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6700DD9F2B15417F00163AA8 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67420BB52B0FF5740063B457 /* Project object */;
 }

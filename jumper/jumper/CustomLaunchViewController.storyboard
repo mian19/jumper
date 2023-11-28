@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LondrinaSolid-Black.ttf">
+            <string>LondrinaSolid-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Launch View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CustomLaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CustomLaunchViewController" customModule="jumper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sets" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-3b-lTB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-Tg-bQd">
+                                <rect key="frame" x="32" y="79" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="P1b-bO-ci8"/>
+                                    <constraint firstAttribute="width" constant="32" id="qfV-r6-4cD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backB"/>
+                                <connections>
+                                    <action selector="toHome:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RgY-nx-8zn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-TO-iSP">
+                                <rect key="frame" x="106.66666666666669" y="74" width="180" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9jj-QC-xOh"/>
+                                    <constraint firstAttribute="height" constant="42" id="luC-LU-KSD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LondrinaSolid-Black" family="Londrina Solid" pointSize="40"/>
+                                <color key="textColor" red="0.80117911100000005" green="0.023411950099999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBO-YI-32K">
+                                <rect key="frame" x="100" y="232" width="193" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hqp-3q-p5D"/>
+                                    <constraint firstAttribute="width" constant="193" id="wqp-J7-IXp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LondrinaSolid-Black" family="Londrina Solid" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Terms of use"/>
+                                <connections>
+                                    <action selector="onTerms:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cw5-mA-Uoz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaU-xT-CJR">
+                                <rect key="frame" x="100" y="303" width="193" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="7ts-9f-7Rp"/>
+                                    <constraint firstAttribute="height" constant="41" id="X4H-0y-8Oj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LondrinaSolid-Black" family="Londrina Solid" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="120" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Music" image="Property 1=sound_max"/>
+                                <connections>
+                                    <action selector="onMusic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cCp-I4-SoI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-bB-2og">
+                                <rect key="frame" x="100" y="161" width="193" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="I3b-mK-BRH"/>
+                                    <constraint firstAttribute="width" constant="193" id="lyY-hQ-TTk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LondrinaSolid-Black" family="Londrina Solid" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Privacy policy"/>
+                                <connections>
+                                    <action selector="onPriv:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jpT-Im-hA8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RaU-xT-CJR" firstAttribute="top" secondItem="VBO-YI-32K" secondAttribute="bottom" constant="30" id="2Vi-WM-cSk"/>
+                            <constraint firstItem="NOU-TO-iSP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4CY-CR-ccl"/>
+                            <constraint firstAttribute="bottom" secondItem="nHH-3b-lTB" secondAttribute="bottom" id="4hs-Qd-YNv"/>
+                            <constraint firstItem="gwu-Tg-bQd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="7qr-Qx-FKe"/>
+                            <constraint firstItem="NOU-TO-iSP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="Edc-39-2wD"/>
+                            <constraint firstItem="nHH-3b-lTB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ICj-wu-wqS"/>
+                            <constraint firstItem="RaU-xT-CJR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RrF-mE-i8g"/>
+                            <constraint firstItem="hpb-bB-2og" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Uch-4m-SCQ"/>
+                            <constraint firstItem="nHH-3b-lTB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZVA-RZ-04p"/>
+                            <constraint firstItem="VBO-YI-32K" firstAttribute="top" secondItem="hpb-bB-2og" secondAttribute="bottom" constant="30" id="a6P-wz-dBs"/>
+                            <constraint firstItem="gwu-Tg-bQd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="iJ8-Qq-43w"/>
+                            <constraint firstItem="nHH-3b-lTB" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jlz-lT-YUQ"/>
+                            <constraint firstItem="VBO-YI-32K" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kU4-Oe-Pek"/>
+                            <constraint firstItem="hpb-bB-2og" firstAttribute="top" secondItem="NOU-TO-iSP" secondAttribute="bottom" constant="45" id="pRb-Io-X5j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="musicBut" destination="RaU-xT-CJR" id="VsZ-i8-pZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Property 1=sound_max" width="32" height="32"/>
+        <image name="backB" width="32" height="32"/>
+        <image name="sets" width="390" height="720"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
