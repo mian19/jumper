@@ -86,7 +86,7 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                  stackView.translatesAutoresizingMaskIntoConstraints = false
                  NSLayoutConstraint.activate([
                      stackView.heightAnchor.constraint(equalToConstant: 30),
-                     stackView.widthAnchor.constraint(equalToConstant: 150 ),
+                     stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width ),
                      stackView.leadingAnchor.constraint(equalTo: navView.leadingAnchor, constant: 15 ),
                      stackView.centerYAnchor.constraint(equalTo: navView.centerYAnchor)
                  ])
