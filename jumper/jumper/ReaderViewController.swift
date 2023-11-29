@@ -8,6 +8,15 @@ class ReaderViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+          return .portrait // Or use the orientation you want to lock to
+      }
+
+      // Disable auto-rotation
+      override var shouldAutorotate: Bool {
+          return false
+      }
+    
     @IBOutlet weak var tView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,15 @@ class TutorViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft // Or use the orientation you want to lock to
+      }
+
+      // Disable auto-rotation
+      override var shouldAutorotate: Bool {
+          return false
+      }
+    
     @IBAction func onN(_ sender: Any) {
         if curr == 0 {
             frIMV.image = UIImage(named: "Frame 1")

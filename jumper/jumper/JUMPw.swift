@@ -14,10 +14,12 @@ class WJUMP: UIViewController, WKNavigationDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+
     var isAlredyJ = UserDefaults.standard.string(forKey: "alredyJ") == nil ? false : true
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         DispatchQueue.main.async {
             UIApplication.shared.isStatusBarHidden = true
         }
@@ -41,8 +43,13 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                 }
             }
         }
-        wJ = WKWebView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height - hC), configuration: configuration)
+        wJ = WKWebView(frame: .zero, configuration: configuration)
         view.addSubview(wJ)
+        wJ.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.height.equalTo(view.bounds.height - hC)
+            make.top.equalToSuperview()
+        }
         wJ.navigationDelegate = self
 
             let navView = UIView()
@@ -50,16 +57,12 @@ class WJUMP: UIViewController, WKNavigationDelegate {
             view.bringSubviewToFront(navView)
             navView.translatesAutoresizingMaskIntoConstraints = false
             navView.backgroundColor = .black
-            navView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            navView.leadingAnchor.constraint(equalTo: wJ.leadingAnchor).isActive = true
-            navView.trailingAnchor.constraint(equalTo: wJ.trailingAnchor).isActive = true
-            navView.heightAnchor.constraint(equalToConstant: hC).isActive = true
-            
-            
-            let stackView = UIStackView()
-                 stackView.axis = .horizontal
-                 stackView.distribution = .fillEqually
-                 stackView.spacing = 16
+       
+        navView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.height.equalTo(hC)
+            make.bottom.equalToSuperview()
+        }
                  
             let leftButton = UIButton()
                    if let leftImage = UIImage(systemName: "arrow.left") {
@@ -76,28 +79,26 @@ class WJUMP: UIViewController, WKNavigationDelegate {
                    rightButton.addTarget(self, action: #selector(onWebRQX), for: .touchUpInside)
         rightButton.tintColor = UIColor.lightGray
         leftButton.tintColor = UIColor.lightGray
-                 
-                 stackView.addArrangedSubview(leftButton)
-                 stackView.addArrangedSubview(rightButton)
-                 
-            navView.addSubview(stackView)
-                 
-                 // Set stack view constraints to position it as needed
-                 stackView.translatesAutoresizingMaskIntoConstraints = false
-                 NSLayoutConstraint.activate([
-                     stackView.heightAnchor.constraint(equalToConstant: 30),
-                     stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width ),
-                     stackView.leadingAnchor.constraint(equalTo: navView.leadingAnchor, constant: 15 ),
-                     stackView.centerYAnchor.constraint(equalTo: navView.centerYAnchor)
-                 ])
-   
-     //   goJ = URL(string: "https://preview.codecanyon.net/item/stick-jump-html5-mobile-game-android-ios/full_screen_preview/25558822?_ga=2.892981.582885592.1701124564-2013591962.1700600824")
 
+        navView.addSubview(rightButton)
+        navView.addSubview(leftButton)
+        
+        rightButton.snp.makeConstraints { make in
+            make.centerY.equalTo(navView.snp.centerY)
+            make.right.equalTo(navView.snp.right).offset(-30)
+        }
+        
+        leftButton.snp.makeConstraints { make in
+              make.centerY.equalTo(navView.snp.centerY)
+              make.left.equalTo(30)
+          }
+ 
             let request = URLRequest(url: goJ)
             wJ.load(request)
-    
-      
     }
+    
+    
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         guard let strUrl = webView.url?.absoluteString else { return }
         print(strUrl)
@@ -124,6 +125,16 @@ class ForGame: UIViewController, WKNavigationDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+          return .portrait // Or use the orientation you want to lock to
+      }
+
+      // Disable auto-rotation
+      override var shouldAutorotate: Bool {
+          return false
+      }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black

@@ -9,8 +9,7 @@ import AppTrackingTransparency
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         OneSignal.initialize("004fbf49-d980-473f-94ac-b5a0156848c6", withLaunchOptions: launchOptions)
@@ -71,8 +70,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             runningJump()
         }
-        
-       
+        let initV = InitialViewController()
+        self.window?.rootViewController = initV
+        self.window?.makeKeyAndVisible()
         return true
     }
 
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.async {
             let storyboardMenu = UIStoryboard(name: "StartViewControllerJUMP", bundle: nil)
             let jumpG = storyboardMenu.instantiateViewController(withIdentifier: "StartViewControllerJUMP")
-                let firstNavigationController = UINavigationController()
+                let firstNavigationController = CustomNavigationController()
                 firstNavigationController.navigationBar.isHidden = true
                 firstNavigationController.pushViewController(jumpG, animated: true)
                 self.window?.rootViewController = firstNavigationController
@@ -112,5 +112,22 @@ extension AppDelegate: AppsFlyerLibDelegate {
     
     func onConversionDataFail(_ error: Error) {
         print("Conversion data error: \(error.localizedDescription)")
+    }
+}
+
+class CustomNavigationController: UINavigationController {
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait // Укажите нужную ориентацию
+    }
+
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+    // Если нужно добавить логику поведения при изменении ориентации, переопределите этот метод:
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        // Добавьте здесь логику при изменении ориентации
     }
 }

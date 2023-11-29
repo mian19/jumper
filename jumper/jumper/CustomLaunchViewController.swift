@@ -22,6 +22,14 @@ class CustomLaunchViewController: UIViewController {
             print("Error muting application sound: \(error.localizedDescription)")
         }
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+          return .portrait // Or use the orientation you want to lock to
+      }
+
+      // Disable auto-rotation
+      override var shouldAutorotate: Bool {
+          return false
+      }
 
     func unmuteApplication() {
         do {
