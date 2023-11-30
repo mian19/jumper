@@ -33,27 +33,28 @@
                                     <action selector="onB:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="w4P-lY-geo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A9M-EH-Xx4">
-                                <rect key="frame" x="32" y="136" width="329" height="632"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mky-11-Vxd">
+                                <rect key="frame" x="30" y="119" width="333" height="669"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A9M-EH-Xx4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="GIq-f4-h42"/>
+                            <constraint firstItem="mky-11-Vxd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Gf0-bR-RJp"/>
                             <constraint firstItem="LBg-fF-rlN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="LcX-Kh-B2H"/>
                             <constraint firstItem="LBg-fF-rlN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Z9x-qo-KkJ"/>
-                            <constraint firstItem="A9M-EH-Xx4" firstAttribute="top" secondItem="LBg-fF-rlN" secondAttribute="bottom" constant="25" id="b8U-2O-c1W"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A9M-EH-Xx4" secondAttribute="trailing" constant="32" id="cSk-xc-VvF"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="A9M-EH-Xx4" secondAttribute="bottom" constant="50" id="hpR-rX-unf"/>
+                            <constraint firstItem="mky-11-Vxd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="gaY-HE-WOa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mky-11-Vxd" secondAttribute="bottom" constant="30" id="m1S-TS-6AA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mky-11-Vxd" secondAttribute="trailing" constant="30" id="otg-Bv-TFp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tView" destination="A9M-EH-Xx4" id="mki-w0-txb"/>
+                        <outlet property="tw" destination="mky-11-Vxd" id="f3w-nG-ndr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
